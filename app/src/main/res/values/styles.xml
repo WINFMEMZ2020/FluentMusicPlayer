@@ -1,0 +1,23 @@
+<resources>
+
+    <style name="Widget.Theme.FluentMusicPlayer.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.FluentMusicPlayer.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">10sp</item> <!-- 文字大小 -->
+    </style>
+
+    <style name="ButtonWrapContentHeight" parent="Widget.AppCompat.Button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+
+
+</resources>

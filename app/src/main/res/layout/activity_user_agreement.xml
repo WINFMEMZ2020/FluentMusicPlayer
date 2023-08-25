@@ -1,0 +1,55 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_box"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:background="@color/black">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="软件用户协议\n欢迎使用本软件！在使用本软件之前，请务必仔细阅读并同意以下条款和条件。如果您不同意这些条款和条件，请停止使用本软件。\nA.使用许可\n  本软件授予您个人、非排他性的使用许可，以在符合本协议规定的条件下使用该软件。\nB.隐私政策\n  您同意遵守我们的隐私政策，详细说明了我们如何收集、使用和保护您的个人数据。\n  1.收集的个人数据\n    本软件不会收集您的任何数据（除您的反馈外，如GitHub上您提交的issues等，这些数据将会公开），包括但不限于：\n      （1）您的设备标识符，您的网络IP等。\n      （2）您的账号名和密码，扫码登录后的cookie等。\n      （3）您的个人收藏、歌单、关注、动态等个人信息。\n      （4）软件其他的全部个人信息。\n    您需要注意，由于本软件基于网易云音乐API，无法确保以下情况的数据泄漏，这些隐私数据的保护不在本软件的范围内：\n      （1）网易云音乐API（GitHub项目）作者可能会收集您的数据（不确定）。\n      （2）网易云音乐的软件公司可能会收集您的数据，您可能需要阅读网易云音乐（软件）的隐私政策。\n  2.个人数据的使用\n    我们会将可用的个人数据用作以下用途：\n      (1)改进产品：分析和评估用户行为以改进我们的软件和服务。\n  3.隐私政策的变更\n    我们保留随时修改本隐私政策的权利。任何修改将在我们的软件上发布更新版本后立即生效。请定期查阅本隐私政策以获取最新信息。\nC.免责声明\n  本软件按“原样”提供，不附带任何形式的明示或暗示担保。您独立承担使用本软件的风险。我们不对以下情况负责：\n    （1）因使用或无法使用本软件而导致的任何损害；\n    （2）由于您使用本软件产生的任何数据丢失或损坏。\nD.开源软件限制\n  本软件为开源软件，但是您需要遵守以下限制：\n    （1）软件原作者有对原项目的知识产权。\n    （2）您不得将本软件说为自己所作。\n    （3）您在修改、再分发本程序时需要遵守本软件的开源协议，即Apache License 2.0开源协议，并在适当的位置提供相关版权和许可声明。\n    （4）您不得将本软件植入恶意程序然后表示为原作者所作。\nE.终止\n  我们保留根据自身判断随时终止、限制或暂停您使用本软件的权利，无需提前通知或承担任何责任。\nF.其他条款\n  适用法律：本协议受中华人民共和国法律管辖，任何争议将提交至有管辖权的法院解决。\n  完整协议：本协议构成您与我们之间就软件使用达成的完整协议，取代所有先前的口头或书面沟通。\n  修改：我们保留随时修改本协议的权利，并会在软件上发布更新的版本。您继续使用本软件即表示接受修订后的协议\n  如果您同意并遵守以上条款和条件，请点击“同意”以继续使用本软件。如果您不同意，请停止使用本软件。\n\n最终修改日期：2023年8月9日"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        tools:ignore="MissingConstraints">
+        <!--用户协议实在是编不下去了www 2023.08.09-->
+    </TextView>
+
+    <Button
+        android:id="@+id/iagree"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="0dp"
+        android:background="@drawable/round_corner_button"
+        android:text="我接受本协议的全部内容"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/idontagree"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="0dp"
+        android:background="@drawable/round_corner_button"
+        android:text="我不接受本协议"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"/>
+
+  </LinearLayout>
+
+</ScrollView>

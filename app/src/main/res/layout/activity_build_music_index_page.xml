@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_box"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:scaleType="matrix"
+                android:scaleX="1.4"
+                android:scaleY="1.4"
+                android:src="@drawable/icon_search" />
+
+            <TextView
+                android:id="@+id/title_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="5dp"
+                android:text="在您访问您的音乐库之前，需要先完成对您的音乐库索引的构建。"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/image_view" />
+            <TextView
+                android:id="@+id/content_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="什么是音乐库索引？\n音乐库索引是一个本地文件，保存在/data/目录下，其内容是一个哈希表，第一个成员为一个ArrayList，其每个成员为一段json数据，每个json段记录以下内容：\n1.歌曲名称\n2.歌曲专辑\n3.歌曲作者\n4.对应歌曲ID\n5.对应专辑ID\n其第二个成员是一个数组，记录当前收藏的所有歌曲的ID。\n有什么作用？\n由于网易云音乐API返回的收藏歌单是一个数组，其每个成员都是歌曲的ID，如果要获取歌曲名称等详细信息，则需要每个ID再请求一次，这样不仅十分消耗服务器资源，还会导致加载速度十分缓慢。\n现在有了音乐库索引，假设您删除了歌曲A，再添加了歌曲B与C，那么只需要先请求一次，获取您最新的收藏歌单，然后与本地索引记录进行比较，程序就可以判断要您对于收藏歌单的修改，这样，只需要请求1（获取最新收藏歌单）+1（歌曲B的详细信息）+1（歌曲C的详细信息）=3次就可以了。\n（作者亲自测试过了！不用此方法需要加载十几秒到几十秒不等才能出结果！）\n在构建音乐库索引应该注意什么？\n1.在构建音乐库索引时程序会进入无响应的状态，请不要操作设备，以免构建失败，此操作将持续十几秒到几十秒不等，具体取决于音乐数量。若超过十几分钟无响应请尝试退出软件重试，若被系统强制退出请清除其它软件的后台再重试。\n2.在构建索引期间，避免对音乐库进行任何修改操作，以免导致索引不准确或错误。最好在构建索引之前暂停对音乐库的修改操作。"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@id/title_line"
+                tools:ignore="SmallSp" />
+
+            <Button
+                android:id="@+id/start_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="开始构建"
+                android:textColor="@color/white"
+                android:background="@drawable/result_round_corner"
+                app:layout_constraintTop_toBottomOf="@id/content_line" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

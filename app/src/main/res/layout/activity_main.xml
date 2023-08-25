@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:background="@color/black"
+    android:clipChildren="false">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/user_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="onLinearLayoutClick"
+            android:background="@drawable/result_round_corner"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/avatar_show"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/imageview_homepage"
+                android:scaleX="0.57"
+                android:scaleY="0.57"
+                android:src="@drawable/icon_user_solid_square" />
+
+
+            <TextView
+                android:id="@+id/nickname_show"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:text="未登录"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/now_playing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="onLinearLayoutClick"
+            android:background="@drawable/result_round_corner"
+            android:layout_marginTop="5dp"
+            android:translationZ="16dp">
+
+            <ImageView
+                android:id="@+id/now_playing_pic_show"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/imageview_homepage_overturn"
+                android:scaleX="0.57"
+                android:scaleY="0.57"
+                android:src="@drawable/icon_play_button" />
+
+
+            <TextView
+                android:id="@+id/now_playing_text_show"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:text="正在播放"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recent_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="onLinearLayoutClick"
+            android:background="@drawable/result_round_corner"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/timer_show"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/imageview_homepage_overturn"
+                android:scaleX="0.57"
+                android:scaleY="0.57"
+                android:src="@drawable/icon_time" />
+
+
+            <TextView
+                android:id="@+id/timername_show"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:text="最近添加"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/search_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="onLinearLayoutClick"
+            android:background="@drawable/result_round_corner"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleX="0.51"
+                android:scaleY="0.51"
+                android:background="@drawable/imageview_homepage_overturn"
+                android:src="@drawable/icon_search" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:text="搜索"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_favourite_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="onLinearLayoutClick"
+            android:background="@drawable/result_round_corner"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleX="0.51"
+                android:scaleY="0.51"
+                android:background="@drawable/imageview_homepage_overturn"
+                android:src="@drawable/icon_music_notes" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:text="音乐"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+        <!--
+
+        <Button
+            android:id="@+id/button"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_corner_homepage"
+            android:text="测试按钮"
+            android:textSize="15sp"
+            android:gravity="center"/>
+
+
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_corner_homepage"
+            android:text="搜索"
+            android:textSize="15sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/user_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_corner_homepage"
+            android:text="用户协议"
+            android:textSize="15sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/viewpagertest_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_corner_homepage"
+            android:gravity="center"
+            android:text="viewpager测试"
+            android:textSize="15sp" />
+
+
+    //基本熟悉了，开始正式开发。  2023.08.11
+
+-->
+
+
+</ScrollView>
